@@ -47,7 +47,7 @@ const shopReducer = (state=initialState,action) => {
     switch(action.type){
         case actionTypes.ADD_TO_CART : 
             const item = state.products.find((product)=>product.id===action.payload.id)
-            const inCart = state.cart.find((product)=>product.id===action.payload.id?true:false)
+            const inCart = state.cart.find((product)=>product.id===action.payload.id)
             return{
                 ...state,
                 cart : inCart ?
